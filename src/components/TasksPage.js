@@ -94,10 +94,10 @@ const TasksPage = () => {
 
     return (
         <div className="outerContainer">
-            <div className="pageHeading">{params.categoryName.toUpperCase()}</div>
+            <div className="pageHeading">{params.categoryName}</div>
             <Row className="mt-5">
                 <Col xs={12} md = {4}>
-                    <div className="addTaskHeading">ADD TASK</div>
+                    <div className="addTaskHeading">Add Task</div>
                     <Form className="addTaskFormContainer">
                         <Form.Group>
                             <Form.Label>Task Name:</Form.Label>
@@ -130,7 +130,7 @@ const TasksPage = () => {
                     </Form>
                 </Col>
                 <Col xs={12} md = {8}>
-                    <div className="taskListHeading">TASK LIST</div>
+                    <div className="taskListHeading">Task List</div>
                     {
                         isLoading ? <LoadingIndicator text={"Loading Tasks..."} /> :
                             (listTasks.map((item, idx) => {

@@ -38,7 +38,7 @@ const SignUp = () => {
     };
 
     return (
-        <Container className="login-container">
+        <div className="login-container">
                 <Row className="justify-content-center align-items-center full-height">
                     <Col>
                         <div className="login-form">
@@ -80,7 +80,7 @@ const SignUp = () => {
                         </div>
                     </Col>
                 </Row>
-            </Container>
+            </div>
     );
 }
 

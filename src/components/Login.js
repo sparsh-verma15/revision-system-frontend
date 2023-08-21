@@ -54,7 +54,7 @@ const Login = () => {
                 <button>Login</button>
             </form> */}
 
-            <Container className="login-container">
+            <div className="login-container">
                 <Row className="justify-content-center align-items-center full-height">
                     <Col>
                         <div className="login-form">
@@ -100,7 +100,7 @@ const Login = () => {
                         </div>
                     </Col>
                 </Row>
-            </Container>
+            </div>
         </>
     );
 };
