@@ -2,8 +2,9 @@ import React, { useContext, useEffect, useState } from "react";
 import { axiosInstance } from "../api/api";
 import { useAuthContext } from "../context/AuthContext";
 import { useNavigate } from "react-router-dom";
-import { Form, Button, Row, Col, Container } from "react-bootstrap";
+import { Form, Button, Row, Col, Container, Image } from "react-bootstrap";
 import './Login.css'
+import logo from "../logo.png"
 
 const Login = () => {
     const [username, setUsername] = useState("");
@@ -49,6 +50,11 @@ const Login = () => {
                 <Row className="justify-content-center align-items-center full-height">
                     <Col>
                         <div className="login-form">
+                            <Row className="d-flex justify-content-center mb-2">
+                                <Col xs={4}>
+                                    <Image src={logo} fluid/>
+                                </Col>
+                            </Row>
                             <h2>Login</h2>
                             <Form className="w-75">
                                 <Form.Group className="mb-3" controlId="username">

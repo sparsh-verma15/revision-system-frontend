@@ -2,7 +2,8 @@ import React, { useContext, useEffect, useState } from "react";
 import { axiosInstance } from "../api/api";
 import { useAuthContext } from "../context/AuthContext";
 import { useNavigate } from "react-router-dom";
-import { Form, Button, Row, Col, Container } from "react-bootstrap";
+import { Form, Button, Row, Col, Container,Image } from "react-bootstrap";
+import logo from "../logo.png"
 import './Login.css'
 
 const SignUp = () => {
@@ -40,7 +41,12 @@ const SignUp = () => {
                 <Row className="justify-content-center align-items-center full-height">
                     <Col>
                         <div className="login-form">
-                            <h2>Sign Up Form</h2>
+                        <Row className="d-flex justify-content-center mb-2">
+                                <Col xs={4}>
+                                    <Image src={logo} fluid/>
+                                </Col>
+                            </Row>
+                            <h2>Sign Up</h2>
                             <Form className="w-75">
                                 <Form.Group  className="mb-3" controlId="username" >
                                     <Form.Label>Username</Form.Label>
