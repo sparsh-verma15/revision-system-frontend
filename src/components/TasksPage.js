@@ -6,6 +6,7 @@ import LoadingIndicator from "./elements/LoadingIndicator";
 import { Button, Form, Row, Col } from "react-bootstrap";
 import './globalStyles.css'
 import './tasksPage.css'
+import Logout from "./Logout";
 
 const TasksPage = () => {
     const params = useParams();
@@ -94,6 +95,7 @@ const TasksPage = () => {
 
     return (
         <div className="outerContainer">
+            <Logout/>
             <div className="pageHeading">{params.categoryName}</div>
             <Row className="mt-5">
                 <Col xs={12} md = {4}>

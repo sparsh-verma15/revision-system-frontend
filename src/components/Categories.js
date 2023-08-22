@@ -7,6 +7,7 @@ import "./categoriesPage.css"
 import CCard from "./elements/CCard";
 import { Button,Form } from "react-bootstrap";
 import LoadingIndicator from "./elements/LoadingIndicator";
+import Logout from "./Logout";
 
 const Categories = () => {
 	const { user } = useAuthContext();
@@ -61,9 +62,9 @@ const Categories = () => {
 	useEffect(() => {
         if (newCategoryName !== "") setShowCategoryEmptyError(false);
     }, [newCategoryName])
-
 	return (
 		<div className="outerContainer">
+			<Logout/>
 			<div className="pageHeading">Categories</div>
 			<div>
 				<Form className="addCategoryFormContainer">

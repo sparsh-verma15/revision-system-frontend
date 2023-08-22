@@ -11,8 +11,8 @@ import ProtectedRoute from "./components/ProtectedRoute";
 import NoRouteMatch from "./components/NoRouteMatch";
 
 
-
 function App() {
+    const auth = useAuthContext();
     return (
         <div>
             <BrowserRouter>

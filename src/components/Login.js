@@ -38,22 +38,13 @@ const Login = () => {
             localStorage.setItem('user', JSON.stringify(userStore));
             auth.login(userStore);
             navigate('/categories');
-            console.log(JSON.stringify(userStore));
         } catch (error) {
-            console.log(error.response.data.message);
+            alert(error.response.data.message);
         }
     };
 
     return (
         <>
-            {/* <form onSubmit={handleLogin}>
-                <label> Username: </label>
-                <input type="text" onChange={(e) => setUser(e.target.value)} value={user} />
-                <label> Password: </label>
-                <input type="password" onChange={(e) => setPassword(e.target.value)} value={password} />
-                <button>Login</button>
-            </form> */}
-
             <div className="login-container">
                 <Row className="justify-content-center align-items-center full-height">
                     <Col>

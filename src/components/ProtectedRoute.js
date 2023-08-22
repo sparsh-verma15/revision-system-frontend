@@ -6,7 +6,7 @@ const ProtectedRoute = (props) => {
     const auth = useAuthContext();
     const navigate = useNavigate();
     if(!auth.user) {
-        return <Navigate to='/login'/>
+        return <Navigate to='/'/>
     }
     return props.children;
 }

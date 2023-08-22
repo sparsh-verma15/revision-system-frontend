@@ -50,11 +50,11 @@
     border-radius: 4px;
     padding: 5px;
     color: white;
-    font-weight: bold;
+    font-weight: 500;
 }
 
 .revised {
-    background-color: #97cf8a;
+    background-color: #61d347;
 }
 
 .notRevised {
@@ -67,6 +67,6 @@
     border-radius: 4px;
     padding: 5px;
     margin-left: 5px;
-    font-weight: bold;
+    font-weight: 500;
     color: white;
 }

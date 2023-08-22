@@ -10,11 +10,9 @@ const SignUp = () => {
     const [password, setPassword] = useState("");
     const [showUsernameError, setShowUsernameError] = useState(false);
     const [showPasswordError, setShowPasswordError] = useState(false);
-    const auth = useAuthContext();
     const navigate = useNavigate();
     const handleSignup = async (e) => {
         e.preventDefault();
-        // Check if fields are empty
         if (username === '') {
             setShowUsernameError(true);
             return;
@@ -30,7 +28,7 @@ const SignUp = () => {
         try {
             const response = await axiosInstance.post('/users/signup', { username: username, password: password });
             alert(response.data.message);
-            navigate('/login');
+            navigate('/');
         } catch (error) {
             alert(error.response.data.message);
             console.log(error.response.data.message);
@@ -71,8 +69,6 @@ const SignUp = () => {
                                         Password is required.
                                     </Form.Control.Feedback>
                                 </Form.Group>
-                                
-
                                 <Button variant="primary" className="mt-2 w-100" onClick={handleSignup}>
                                     Sign Up
                                 </Button>
